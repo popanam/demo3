@@ -22,13 +22,13 @@ $'\t}' \
 '}' \
 '' \
 'server {' \
-$'\tlisten 443 ssl;' \
-$'\tserver_name docker.au-team.irpo;' \
-$'ssl_certificate /etc/nginx/ssl/docker.au-team.irpo.cer;' \
-$'ssl_certificate_key /etc/nginx/ssl/docker.au-team.irpo.key;' \
-$'ssl_ciphers GOST2012-GOST8912-GOST8912:HIGH:MEDIUM;' \
-$'ssl_protocols TLSv1 TLSv1.1 TLSv1.2;' \
-$'ssl_prefer_server_ciphers on;' \
+$'\tlisten 443 ssl;' 
+$'\tserver_name docker.au-team.irpo;' 
+$'\tssl_certificate /etc/nginx/ssl/docker.au-team.irpo.cer;' 
+$'\tssl_certificate_key /etc/nginx/ssl/docker.au-team.irpo.key;' 
+$'\tssl_ciphers GOST2012-GOST8912-GOST8912:HIGH:MEDIUM;' 
+$'\tssl_protocols TLSv1 TLSv1.1 TLSv1.2;' 
+$'\tssl_prefer_server_ciphers on;' 
 '' \
 $'\tlocation / {' \
 $'\t\tproxy_pass http://172.16.2.2:8080;' \
